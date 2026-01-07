@@ -1,20 +1,22 @@
 package br.com.simplecrud.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table (name = "alunos")
 public class Student {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private String id;
 
+    @Column(name = "nomes")
     private String nome;
 
+    @Column(name = "idades")
     private Integer idade;
 
+    @Column(name = "numero_matricula")
     private Integer matricula;
 
     public Student(){
