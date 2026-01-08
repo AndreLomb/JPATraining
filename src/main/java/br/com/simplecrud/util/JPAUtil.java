@@ -5,7 +5,7 @@ import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
 
 public class JPAUtil {
-    private static final EntityManagerFactory CRUD = Persistence.createEntityManagerFactory("SimpleCRUD");
+    private static final EntityManagerFactory CRUD = Persistence.createEntityManagerFactory("simpleCrud");
 
     public static EntityManager getEntityManagerSimpleCrud() {
         return CRUD.createEntityManager();

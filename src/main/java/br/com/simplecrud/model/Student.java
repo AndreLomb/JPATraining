@@ -19,8 +19,19 @@ public class Student {
     @Column(name = "numero_matricula")
     private Integer matricula;
 
+    @OneToOne
+    private Course course;
+
     public Student(){
 
+    }
+
+    public Student(Integer id, String nome, Integer idade, Integer matricula, Course course) {
+        this.id = id;
+        this.nome = nome;
+        this.idade = idade;
+        this.matricula = matricula;
+        this.course = course;
     }
 
     public Integer getId() {
